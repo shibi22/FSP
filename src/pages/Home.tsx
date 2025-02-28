@@ -4,8 +4,19 @@ import { ChevronDown } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="pt-16">
-      <div className="min-h-screen flex items-center justify-center relative bg-gradient-to-b from-[#D1E8E2] to-white">
+    <div className="relative pt-16">
+      {/* Background Video */}
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+      >
+        <source src="/BG-animation.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div className="min-h-screen flex items-center justify-center relative bg-gradient-to-b from-[#D1E8E2] to-white bg-opacity-50">
         <div className="max-w-6xl mx-auto px-4 py-16 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-[#2C3531] mb-6">
             Creative Resumes, Portfolios & Projects
@@ -33,13 +44,12 @@ export default function Home() {
               Contact Me
             </Link>
           </div>
-          
+
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ChevronDown className="w-8 h-8 text-[#116466]" />
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

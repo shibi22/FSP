@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-[#D9B08C] pt-8 text-center">
-          <p>© 2024 Shibiraj. All rights reserved.</p>
+          <p>©{new Date().getFullYear()} 2024 Shibiraj. All rights reserved.</p>
           <p className="text-sm mt-2">Website designed & developed by Shibiraj</p>
         </div>
       </div>

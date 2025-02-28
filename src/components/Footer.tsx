@@ -1,7 +1,11 @@
-import React from 'react';
-import { Mail, Github, Linkedin, Instagram } from 'lucide-react';
+import React from "react";
+import { Mail, Github, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
+  const startYear = 2025; 
+  const currentYear = new Date().getFullYear();
+  const displayYear = startYear === currentYear ? currentYear : `${startYear} - ${currentYear}`;
+
   return (
     <footer className="bg-[#2C3531] text-white py-12">
       <div className="max-w-6xl mx-auto px-4">
@@ -13,7 +17,7 @@ export default function Footer() {
               shibi73201@gmail.com
             </a>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-semibold mb-4">Social Media</h3>
             <div className="space-y-2">
@@ -31,7 +35,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -41,15 +45,15 @@ export default function Footer() {
               <li>Project Development</li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-xl font-semibold mb-4">About</h3>
             <p>Professional freelancer specializing in digital solutions and personal branding.</p>
           </div>
         </div>
-        
+
         <div className="border-t border-[#D9B08C] pt-8 text-center">
-          <p>©{new Date().getFullYear()} 2024 Shibiraj. All rights reserved.</p>
+          <p>© {displayYear} Shibiraj. All rights reserved.</p>
           <p className="text-sm mt-2">Website designed & developed by Shibiraj</p>
         </div>
       </div>

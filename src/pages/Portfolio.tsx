@@ -20,9 +20,9 @@ const portfolioItems = [
   {
     title: 'AI Chat Application',
     category: 'AI/ML',
-    image: 'https://shibiverse.tech/chat-bot/',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
     description: 'Intelligent chatbot with natural language processing',
-    downloadUrl: '#',
+    downloadUrl: 'https://drive.google.com/file/d/1qIK-SmHxOTmmSYZdQ819NfYVSneEtfyA/view?usp=drive_link',
     buttonType: 'download'
   },
   {

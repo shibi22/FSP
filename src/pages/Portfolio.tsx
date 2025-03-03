@@ -6,7 +6,7 @@ const portfolioItems = [
     category: 'Web Development',
     image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800',
     description: 'Modern e-commerce solution with advanced features',
-    demoUrl: 'https://www.amazon.com',
+    demoUrl: 'https://shibi732011.wixsite.com/realtime-rs',
     buttonType: 'demo'
   },
   {
@@ -14,13 +14,13 @@ const portfolioItems = [
     category: 'Portfolio Design',
     image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80&w=800',
     description: 'Clean and professional portfolio showcase',
-    demoUrl: 'https://www.behance.net',
+    demoUrl: 'https://shibi73201.wixsite.com/my-site-5/',
     buttonType: 'demo'
   },
   {
     title: 'AI Chat Application',
     category: 'AI/ML',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
+    image: 'https://shibiverse.tech/chat-bot/',
     description: 'Intelligent chatbot with natural language processing',
     downloadUrl: '#',
     buttonType: 'download'
@@ -32,7 +32,15 @@ const portfolioItems = [
     description: 'A fully responsive Zomato-inspired food ordering application',
     demoUrl: 'https://www.zomato.com',
     buttonType: 'demo'
-  }
+  },
+  {
+
+    title: 'Quick Commerce',
+    category: 'Web Development',
+    image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&q=80&w=800',
+    description: 'A fully responsive Zomato-inspired food ordering application',
+    demoUrl: 'https://speedyshopperhub.lovable.app/',
+    buttonType: 'demo'}
 ];
 
 export default function Portfolio() {

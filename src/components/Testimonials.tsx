@@ -14,17 +14,17 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Priya Sharma',
+    name: 'Priya',
     role: 'Software Engineer',
     content: 'The resume design service was exceptional! I received multiple interview calls within a week of updating my resume.',
     gender: 'female'
   },
   {
     id: 2,
-    name: 'Rahul Patel',
+    name: 'Swetha',
     role: 'UX Designer',
     content: 'My portfolio website looks amazing and has helped me land several freelance projects. Highly recommended!',
-    gender: 'male'
+    gender: 'female'
   },
   {
     id: 3,
@@ -42,10 +42,10 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 5,
-    name: 'Neha Kapoor',
+    name: 'Madhan Gowri',
     role: 'Content Creator',
     content: 'The portfolio design perfectly showcases my work. I\'ve received so many compliments on the clean, professional layout.',
-    gender: 'female'
+    gender: 'male'
   }
 ];
 

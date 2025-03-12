@@ -9,7 +9,7 @@ interface ServiceItem {
   details: string[];
 }
 
-const services: ServiceItem[] = [
+const services : ServiceItem[] = [
   {
     title: 'Resume Designing',
     description: 'Professional ATS-friendly resumes tailored to your career goals',

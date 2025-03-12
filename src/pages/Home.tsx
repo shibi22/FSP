@@ -1,31 +1,33 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import Testimonials from '../components/Testimonials';
 import { motion } from 'framer-motion';
 
 export default function Home() {
+
+  
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
       <div className="min-h-screen flex items-center justify-center relative bg-gradient-to-b from-primary-mint to-white">
         <div className="max-w-6xl mx-auto px-4 py-16 text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-6xl font-bold text-accent-olive mb-6"
+            className="text-5xl md:text-6xl font-bold text-[#2C3531] mb-6"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-[#2C3531] mb-6">
             Creative Resumes, Portfolios & Projects
             <span className="block text-[#116466] mt-2">
               Build Your Bridge to Success!
             </span>
-          </h1>
-
           </motion.h1>
-          
-          <motion.p 
+
+
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -34,33 +36,33 @@ export default function Home() {
             If You Want to Crack the System,
             First Understand It.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/services"
-              className="bg-[#FFCB9A] text-[#2C3531] px-8 py-3 rounded-lg font-semibold 
+              <Link
+                to="/services"
+                className="bg-[#FFCB9A] text-[#2C3531] px-8 py-3 rounded-lg font-semibold 
                 hover:bg-[#D9B08C] transition-colors duration-300"
-            >
-              Get Started
-            </Link>
-            <Link
-              to="/contact"
-              className="bg-[#116466] text-white px-8 py-3 rounded-lg font-semibold 
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/contact"
+                className="bg-[#116466] text-white px-8 py-3 rounded-lg font-semibold 
                 hover:bg-[#2C3531] transition-colors duration-300"
-            >
-              Contact Me
-            </Link>
-          </div>
-          
+              >
+                Contact Me
+              </Link>
+            </div>
+
 
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
@@ -74,7 +76,7 @@ export default function Home() {
       {/* Services Preview Section */}
       <div className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -82,7 +84,7 @@ export default function Home() {
           >
             Our Services
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service Cards */}
             <motion.div

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Check, AlertCircle, LogIn } from 'lucide-react';
-// import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 
 interface Offer {
@@ -16,7 +16,7 @@ interface Offer {
 }
 
 export default function OffersUpdates() {
-  // const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useAuth();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [claimedOffers, setClaimedOffers] = useState<string[]>([]);
   const [activeOffer, setActiveOffer] = useState<Offer | null>(null);
@@ -75,23 +75,23 @@ export default function OffersUpdates() {
     }
   ];
 
-  // const handleClaimOffer = (offer: Offer) => {
-  //   if (!isAuthenticated) {
-  //     setActiveOffer(offer);
-  //     setShowLoginModal(true);
-  //     return;
-  //   }
+  const handleClaimOffer = (offer: Offer) => {
+    if (!isAuthenticated) {
+      setActiveOffer(offer);
+      setShowLoginModal(true);
+      return;
+    }
 
-  //   // If authenticated, mark as claimed
-  //   setClaimedOffers(prev => [...prev, offer.id]);
-  //   setActiveOffer(offer);
-  //   setShowSuccessModal(true);
+    // If authenticated, mark as claimed
+    setClaimedOffers(prev => [...prev, offer.id]);
+    setActiveOffer(offer);
+    setShowSuccessModal(true);
 
-  //   // Auto-hide success modal after 3 seconds
-  //   setTimeout(() => {
-  //     setShowSuccessModal(false);
-  //   }, 3000);
-  // };
+    // Auto-hide success modal after 3 seconds
+    setTimeout(() => {
+      setShowSuccessModal(false);
+    }, 3000);
+  };
 
   const closeLoginModal = () => {
     setShowLoginModal(false);
@@ -166,13 +166,13 @@ export default function OffersUpdates() {
                   </span>
                 </div>
                 <button
-                  // onClick={() => handleClaimOffer(offer)}
-                  // disabled={claimedOffers.includes(offer.id)}
-                  // className={`w-full py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2 ${
-                  //   claimedOffers.includes(offer.id)
-                  //     ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                  //     : 'bg-accent-peach text-accent-olive hover:bg-accent-sand'
-                  // }`}
+                  onClick={() => handleClaimOffer(offer)}
+                  disabled={claimedOffers.includes(offer.id)}
+                  className={`w-full py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2 ${
+                    claimedOffers.includes(offer.id)
+                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      : 'bg-accent-peach text-accent-olive hover:bg-accent-sand'
+                  }`}
                 >
                   {claimedOffers.includes(offer.id) ? 'Claimed' : 'Claim Offer'}
                 </button>
